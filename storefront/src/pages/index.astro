@@ -1,0 +1,246 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="LesCommerce Africa — SaaS Multi-Tenant Platform" lang="en" brand="eny">
+  <Header lang="en" brand="eny" />
+  
+  <main class="pt-32 pb-24 bg-gradient-to-b from-[#1A1A1A] via-[#1F1F1F] to-[#151515] text-[#F8FAFC]">
+    <!-- Hero Section -->
+    <section class="max-w-[var(--spacing-container)] mx-auto px-6 py-24 text-center relative overflow-hidden">
+      <!-- Glow effect -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[hsl(247,67%,59%)]/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+      <div class="inline-block px-4 py-1.5 rounded-full bg-[hsl(247,67%,59%)]/15 border border-[hsl(247,67%,59%)]/30 text-[hsl(247,67%,59%)] text-xs font-bold mb-8 uppercase tracking-widest animate-fade-up">
+        LesCommerce SaaS Platform
+      </div>
+      <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 animate-fade-up delay-1 text-white">
+        Africa's Premier <br/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[hsl(247,67%,59%)] to-[#B94040]">E-Commerce Engine</span>
+      </h1>
+      <p class="text-xl text-[#F8FAFC]/70 max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-up delay-2">
+        Empowering local merchants, custom brands, and artisans across Lagos, Cape Town, Nairobi, and Accra with high-speed multi-tenant retail storefronts.
+      </p>
+      <div class="flex justify-center gap-4 animate-fade-up delay-3">
+        <a href="#stores" class="px-8 py-4 rounded-xl bg-[hsl(247,67%,59%)] text-black font-bold hover:bg-[hsl(247,67%,64%)] hover:scale-105 active:scale-95 transition-all shadow-[0_0_30px_-5px_rgba(208,253,23,0.3)]">Explore Live Stores</a>
+        <a href="#catalog" class="px-8 py-4 rounded-xl border border-[#333] bg-[#222]/50 backdrop-blur font-bold hover:border-[hsl(247,67%,59%)] transition-colors">Browse Products</a>
+      </div>
+    </section>
+
+    <!-- Multi-Tenant Stores Directory -->
+    <section id="stores" class="max-w-[var(--spacing-container)] mx-auto px-6 py-16 scroll-mt-24">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4 text-white">Our Active Retail Merchants</h2>
+        <p class="text-[#F8FAFC]/60 max-w-lg mx-auto">Each store is fully isolated with custom domains, unique designs, and independent SQLite tenant setups.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Store 1: Lagos Fashion -->
+        <div class="glass-card p-8 flex flex-col justify-between border-l-4 border-l-[#00AA55] group relative overflow-hidden bg-[#242424]/40 hover:bg-[#242424]/80">
+          <div>
+            <div class="text-[#00AA55] font-mono text-xs font-bold uppercase mb-4 tracking-wider">Lagos, Nigeria</div>
+            <h3 class="text-2xl font-bold mb-3 text-white">Lagos Fashion Outlet</h3>
+            <p class="text-[#F8FAFC]/60 text-sm leading-relaxed mb-6">Contemporary African fashion and luxury garments from Nigeria's top-tier designers.</p>
+          </div>
+          <a href="http://localhost:4005/stores/lagos-fashion" target="_blank" class="text-sm font-bold text-[#00AA55] flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+            Visit Storefront <span>&rarr;</span>
+          </a>
+        </div>
+
+        <!-- Store 2: Cape Town Artisans -->
+        <div class="glass-card p-8 flex flex-col justify-between border-l-4 border-l-[#0066CC] group relative overflow-hidden bg-[#242424]/40 hover:bg-[#242424]/80">
+          <div>
+            <div class="text-[#0066CC] font-mono text-xs font-bold uppercase mb-4 tracking-wider">Cape Town, South Africa</div>
+            <h3 class="text-2xl font-bold mb-3 text-white">Cape Town Artisans</h3>
+            <p class="text-[#F8FAFC]/60 text-sm leading-relaxed mb-6">Premium handcrafted home decor, local artwork, and sustainable custom woodworks.</p>
+          </div>
+          <a href="http://localhost:4005/stores/capetown-artisans" target="_blank" class="text-sm font-bold text-[#0066CC] flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+            Visit Storefront <span>&rarr;</span>
+          </a>
+        </div>
+
+        <!-- Store 3: Accra Spice Market -->
+        <div class="glass-card p-8 flex flex-col justify-between border-l-4 border-l-[#CC0000] group relative overflow-hidden bg-[#242424]/40 hover:bg-[#242424]/80">
+          <div>
+            <div class="text-[#CC0000] font-mono text-xs font-bold uppercase mb-4 tracking-wider">Accra, Ghana</div>
+            <h3 class="text-2xl font-bold mb-3 text-white">Accra Spice Market</h3>
+            <p class="text-[#F8FAFC]/60 text-sm leading-relaxed mb-6">Authentic spices, premium hot sauces, and traditional Ghanaian culinary ingredients.</p>
+          </div>
+          <a href="http://localhost:4005/stores/accra-spice" target="_blank" class="text-sm font-bold text-[#CC0000] flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+            Visit Storefront <span>&rarr;</span>
+          </a>
+        </div>
+
+        <!-- Store 4: Inkless Is More -->
+        <div class="glass-card p-8 flex flex-col justify-between border-l-4 border-l-[#fddb24] group relative overflow-hidden bg-[#242424]/40 hover:bg-[#242424]/80">
+          <div>
+            <div class="text-[#fddb24] font-mono text-xs font-bold uppercase mb-4 tracking-wider">Nairobi, Kenya</div>
+            <h3 class="text-2xl font-bold mb-3 text-white">Inkless Is More</h3>
+            <p class="text-[#F8FAFC]/60 text-sm leading-relaxed mb-6">Nairobi's premier aesthetic laser treatment hub, tattoo removals, and skincare shop.</p>
+          </div>
+          <a href="http://localhost:4005/stores/inklessismore-ke" target="_blank" class="text-sm font-bold text-[#fddb24] flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+            Visit Storefront <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Catalog Section (Interactive Client Fetch) -->
+    <section id="catalog" class="max-w-[var(--spacing-container)] mx-auto px-6 py-16 scroll-mt-24 border-t border-[#333]">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-extrabold mb-4 text-white">Featured Live Products</h2>
+          <p class="text-[#F8FAFC]/60">Dynamically synced with our SQLite database in Port 4005 backend.</p>
+        </div>
+        <div class="flex gap-2 flex-wrap">
+          <button id="btn-all" class="px-4 py-2 rounded-lg bg-[hsl(247,67,59)]/10 text-[hsl(247,67,59)] border border-[hsl(247,67,59)]/30 font-semibold text-sm hover:bg-[hsl(247,67,59)]/20 transition-all cursor-pointer active">All Products</button>
+          <button id="btn-lagos" class="px-4 py-2 rounded-lg bg-[#222] text-[#F8FAFC]/75 border border-[#333] font-semibold text-sm hover:border-[#444] transition-all cursor-pointer">Lagos Fashion</button>
+          <button id="btn-capetown" class="px-4 py-2 rounded-lg bg-[#222] text-[#F8FAFC]/75 border border-[#333] font-semibold text-sm hover:border-[#444] transition-all cursor-pointer">Cape Town Artisans</button>
+          <button id="btn-accra" class="px-4 py-2 rounded-lg bg-[#222] text-[#F8FAFC]/75 border border-[#333] font-semibold text-sm hover:border-[#444] transition-all cursor-pointer">Accra Spices</button>
+        </div>
+      </div>
+
+      <!-- Live Products Grid Container -->
+      <div id="products-loading" class="text-center py-20 text-[#F8FAFC]/50">
+        <div class="inline-block w-8 h-8 border-4 border-[hsl(247,67%,59%)] border-t-transparent rounded-full animate-spin mb-4"></div>
+        <p>Loading live catalog from Port 4005...</p>
+      </div>
+
+      <div id="products-grid" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 hidden">
+        <!-- Products will be dynamically populated here via Javascript -->
+      </div>
+    </section>
+  </main>
+
+  <Footer lang="en" brand="eny" />
+</Layout>
+
+<!-- Client Side Loading & Dynamic Sync Logic -->
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const productsGrid = document.getElementById('products-grid');
+    const loadingEl = document.getElementById('products-loading');
+    
+    // Store buttons
+    const btnAll = document.getElementById('btn-all');
+    const btnLagos = document.getElementById('btn-lagos');
+    const btnCapetown = document.getElementById('btn-capetown');
+    const btnAccra = document.getElementById('btn-accra');
+    
+    let allProducts = [];
+    
+    // Fetch Products from API on port 4005
+    fetch('http://localhost:4005/api/products')
+      .then(res => {
+        if (!res.ok) throw new Error('Failed to reach backend API');
+        return res.json();
+      })
+      .then(json => {
+        if (json.data && Array.isArray(json.data)) {
+          allProducts = json.data;
+          renderProducts(allProducts);
+        } else {
+          loadMockFallback();
+        }
+      })
+      .catch(err => {
+        console.warn('Backend API offline. Loading mock product sandbox fallback...', err);
+        loadMockFallback();
+      });
+
+    // Mock data fallback if backend is offline during client rendering
+    function loadMockFallback() {
+      allProducts = [
+        { id: 101, name: 'Adire Luxury Silk Kimono', description: 'Hand-dyed authentic Nigerian silk kimono with deep green accents.', price: '120.00', currency: 'USD', images: ['/images/product-kimono.png'], store: { slug: 'lagos-fashion', name: 'Lagos Fashion Outlet' } },
+        { id: 102, name: 'Handcrafted Walnut Desk Lamp', description: 'Minimalist designer wooden walnut lamp with custom fabric cable.', price: '85.00', currency: 'USD', images: ['/images/product-lamp.png'], store: { slug: 'capetown-artisans', name: 'Cape Town Artisans' } },
+        { id: 103, name: 'Accra Hot Shito Seasoning', description: 'Traditional hot pepper seasoning blended with Ghanaian spices.', price: '15.00', currency: 'USD', images: ['/images/product-shito.png'], store: { slug: 'accra-spice', name: 'Accra Spice Market' } },
+        { id: 104, name: 'Aso-Oke Unisex Streetwear Jacket', description: 'Premium streetwear jacket utilizing traditional Yoruba weaving.', price: '210.00', currency: 'USD', images: ['/images/product-jacket.png'], store: { slug: 'lagos-fashion', name: 'Lagos Fashion Outlet' } },
+        { id: 105, name: 'Handwoven Zulu Basket (M)', description: 'Beautifully detailed medium Zulu basket hand-knitted from wild grasses.', price: '65.00', currency: 'USD', images: ['/images/product-basket.png'], store: { slug: 'capetown-artisans', name: 'Cape Town Artisans' } },
+        { id: 106, name: 'Premium Ground Grains of Selim', description: 'Traditional aromatic spice with musky wood notes for stews.', price: '12.00', currency: 'USD', images: ['/images/product-selim.png'], store: { slug: 'accra-spice', name: 'Accra Spice Market' } }
+      ];
+      renderProducts(allProducts);
+    }
+
+    function renderProducts(list) {
+      loadingEl.classList.add('hidden');
+      productsGrid.classList.remove('hidden');
+      productsGrid.innerHTML = '';
+      
+      if (list.length === 0) {
+        productsGrid.innerHTML = '<div class="col-span-full text-center text-[#F8FAFC]/50">No products found.</div>';
+        return;
+      }
+      
+      list.forEach(p => {
+        const storeLabel = p.store ? p.store.name : 'Merchant Store';
+        const storeSlug = p.store ? p.store.slug : '';
+        const storeBorder = storeSlug === 'lagos-fashion' ? '#00AA55' : 
+                            storeSlug === 'capetown-artisans' ? '#0066CC' : 
+                            storeSlug === 'accra-spice' ? '#CC0000' : '#888';
+
+        const card = document.createElement('div');
+        card.className = 'glass-card bg-[#242424]/40 hover:bg-[#242424]/90 flex flex-col justify-between overflow-hidden relative group p-6';
+        card.innerHTML = `
+          <div>
+            <div class="relative w-full h-48 bg-[#1f1f1f] rounded-xl overflow-hidden mb-6 flex items-center justify-center border border-[#333]">
+              <span class="text-[#F8FAFC]/25 font-bold uppercase text-center p-4">${p.name}</span>
+            </div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2.5 py-0.5 rounded text-xs font-bold" style="background-color: ${storeBorder}20; color: ${storeBorder}">${storeLabel}</span>
+              <span class="text-sm font-semibold text-[#F8FAFC]/40 font-mono">${p.category || 'Product'}</span>
+            </div>
+            <h4 class="text-xl font-bold mb-2 text-white group-hover:text-[hsl(247,67%,59%)] transition-colors">${p.name}</h4>
+            <p class="text-[#F8FAFC]/65 text-sm line-clamp-2 leading-relaxed mb-6">${p.description || 'No description provided.'}</p>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t border-[#333]">
+            <span class="text-2xl font-extrabold text-white font-mono">${p.price} <span class="text-sm font-medium text-[#F8FAFC]/55">${p.currency || 'USD'}</span></span>
+            <button class="px-4 py-2 rounded-lg bg-[hsl(247,67%,59%)] text-black text-xs font-bold hover:scale-105 active:scale-95 transition-all shadow-[0_0_15px_-3px_rgba(208,253,23,0.3)]">Buy Now</button>
+          </div>
+        `;
+        productsGrid.appendChild(card);
+      });
+    }
+
+    // Filter Buttons Handlers
+    function removeActiveClasses() {
+      [btnAll, btnLagos, btnCapetown, btnAccra].forEach(btn => {
+        btn.classList.remove('bg-[hsl(247,67%,59%)]/10', 'text-[hsl(247,67%,59%)]', 'border-[hsl(247,67%,59%)]/30', 'active');
+        btn.classList.add('bg-[#222]', 'text-[#F8FAFC]/75', 'border-[#333]');
+      });
+    }
+
+    function setActiveClass(btn) {
+      btn.classList.remove('bg-[#222]', 'text-[#F8FAFC]/75', 'border-[#333]');
+      btn.classList.add('bg-[hsl(247,67%,59%)]/10', 'text-[hsl(247,67%,59%)]', 'border-[hsl(247,67%,59%)]/30', 'active');
+    }
+
+    btnAll.addEventListener('click', () => {
+      removeActiveClasses();
+      setActiveClass(btnAll);
+      renderProducts(allProducts);
+    });
+
+    btnLagos.addEventListener('click', () => {
+      removeActiveClasses();
+      setActiveClass(btnLagos);
+      const filtered = allProducts.filter(p => p.store && p.store.slug === 'lagos-fashion');
+      renderProducts(filtered);
+    });
+
+    btnCapetown.addEventListener('click', () => {
+      removeActiveClasses();
+      setActiveClass(btnCapetown);
+      const filtered = allProducts.filter(p => p.store && p.store.slug === 'capetown-artisans');
+      renderProducts(filtered);
+    });
+
+    btnAccra.addEventListener('click', () => {
+      removeActiveClasses();
+      setActiveClass(btnAccra);
+      const filtered = allProducts.filter(p => p.store && p.store.slug === 'accra-spice');
+      renderProducts(filtered);
+    });
+  });
+</script>
